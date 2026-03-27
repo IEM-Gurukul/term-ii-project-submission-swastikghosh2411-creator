@@ -1,43 +1,46 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/pG3gvzt-)
-# PCCCS495 – Term II Project
+# Student Management System
 
-## Project Title
+A console-based Java application demonstrating core OOP principles including Abstraction, Encapsulation, Inheritance, Polymorphism, Exception Handling, and Collections.
 
----
+## Author
+**Swastik Ghosh** | IEM Gurukul | Term II OOP Project
 
-## Problem Statement (max 150 words)
+## Features
+- Add, view, update, and delete students
+- Support for Undergraduate and Graduate student types (Inheritance & Polymorphism)
+- File-based persistence using CSV storage
+- Custom exception handling
+- Role-based architecture (Admin / Student)
+- Full unit test coverage for core services
 
----
-
-## Target User
-
----
-
-## Core Features
-
-- 
-- 
-- 
-
----
+## Project Structure
+```
+src/
+├── main/java/com/sms/
+│   ├── model/          # Student, UndergraduateStudent, GraduateStudent
+│   ├── repository/     # IStudentRepository, CsvStudentRepository
+│   ├── service/        # StudentService
+│   ├── exception/      # Custom exceptions
+│   ├── ui/             # ConsoleUI
+│   └── util/           # InputValidator, FileUtil
+└── test/java/com/sms/  # Unit tests
+```
 
 ## OOP Concepts Used
+| Concept | Where Applied |
+|---|---|
+| Encapsulation | All model classes with private fields + getters/setters |
+| Abstraction | `IStudentRepository` interface, abstract `Student` base |
+| Inheritance | `UndergraduateStudent`, `GraduateStudent` extend `Student` |
+| Polymorphism | `displayInfo()` overridden in each student subclass |
+| Exception Handling | Custom `StudentNotFoundException`, `DuplicateStudentException` |
+| Collections | `ArrayList`, `HashMap` used in service layer |
 
-- Abstraction:
-- Inheritance:
-- Polymorphism:
-- Exception Handling:
-- Collections / Threads:
+## Running the Project
+```bash
+javac -d out src/main/java/com/sms/**/*.java
+java -cp out com.sms.Main
+```
 
----
-
-## Proposed Architecture Description
-
----
-
-## How to Run
-
----
-
-## Git Discipline Notes
-Minimum 10 meaningful commits required.
+## Data Persistence
+Student data is stored in `data/students.csv`. The file is auto-created on first run.
