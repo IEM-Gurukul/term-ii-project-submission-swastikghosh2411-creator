@@ -23,9 +23,6 @@ public class StudentService {
         this.repository = repository;
     }
 
-    /**
-     * Validates then delegates to repository.
-     */
     public void addStudent(Student student)
             throws DuplicateStudentException, InvalidInputException {
         InputValidator.validateStudentId(student.getStudentId());
