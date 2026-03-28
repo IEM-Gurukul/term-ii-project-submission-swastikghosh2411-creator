@@ -1,7 +1,7 @@
 package com.sms.model;
 
 /**
- * Represents an Undergraduate student.
+
  * Demonstrates Inheritance — extends Student.
  */
 public class UndergraduateStudent extends Student {
@@ -22,9 +22,7 @@ public class UndergraduateStudent extends Student {
     public void   setCurrentYear(int currentYear) { this.currentYear = currentYear; }
     public void   setMajor(String major)          { this.major = major; }
 
-    /**
-     * Polymorphic display — specific to undergrad info.
-     */
+    
     @Override
     public void displayInfo() {
         System.out.println("┌─────────────────────────────────────────────┐");
