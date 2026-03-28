@@ -13,6 +13,6 @@ public class Main {
         IStudentRepository repository = new CsvStudentRepository("data/students.csv");
         StudentService     service    = new StudentService(repository);
         ConsoleUI          ui         = new ConsoleUI(service);
-        
+        ui.start();
     }
 }
