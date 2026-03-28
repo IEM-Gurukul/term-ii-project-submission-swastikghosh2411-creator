@@ -10,15 +10,6 @@ import java.io.*;
 import java.util.*;
 import java.util.stream.Collectors;
 
-/**
- * CSV-based persistent implementation of IStudentRepository.
- * Addresses the feedback: "data will be lost when the application terminates."
- *
- * CSV format:
- *   TYPE,ID,NAME,AGE,EMAIL,GPA,EXTRA1,EXTRA2
- *   UG  -> EXTRA1=currentYear, EXTRA2=major
- *   PG  -> EXTRA1=researchTopic, EXTRA2=supervisor
- */
 public class CsvStudentRepository implements IStudentRepository {
 
     private final String filePath;
