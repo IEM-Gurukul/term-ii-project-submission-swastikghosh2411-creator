@@ -1,9 +1,6 @@
 package com.sms.model;
 
-/**
- * Abstract base class for all student types.
- * Demonstrates Abstraction and Encapsulation.
- */
+// Encapsulation: all fields are private at the top)
 public abstract class Student {
 
     private String studentId;
@@ -33,10 +30,7 @@ public abstract class Student {
     public void setEmail(String email)  { this.email = email; }
     public void setGpa(double gpa)      { this.gpa = gpa; }
 
-    /**
-     * Abstract method — each subclass must provide its own display.
-     * Demonstrates Polymorphism via method overriding.
-     */
+    
     public abstract void displayInfo();
 
     /**
